@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "621645718668",
+    "project_id": "piscinamobile4",
+    "storage_bucket": "piscinamobile4.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:621645718668:android:c081621b0d1a7e4ecac7a9",
+        "android_client_info": {
+          "package_name": "net.torralba.piscinemobile4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "621645718668-k4r0e7uol4q28qlhnrph22eufv8mvvgv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "net.torralba.piscinemobile4",
+            "certificate_hash": "21ab51a7e6de2317bbb7bd6d04435d1a978cd58f"
+          }
+        },
+        {
+          "client_id": "621645718668-m9icsm2nh7q1977unpobiffnja9gb60c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGah45_N3-8pSjvWypR-HFggRhiWh5sOQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "621645718668-m9icsm2nh7q1977unpobiffnja9gb60c.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "621645718668-1cf2fpa0e79cbbvuf7acc3269vo1mn6h.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.piscineMobile4"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
