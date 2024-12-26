@@ -50,7 +50,7 @@ class _CalendarPageState extends State<CalendarPage> {
               setState(() {
                 _selectedDay = selectedDay;
                 _focusedDay = focusedDay;
-              });
+              });              
             },
             calendarStyle: const CalendarStyle(
               todayDecoration: BoxDecoration(
@@ -84,11 +84,23 @@ class _CalendarPageState extends State<CalendarPage> {
                 return const Center(child: Text('No hay datos disponibles'));
               }
     
-              final notes = snapshot.data!;
+              //Filtrar las notas por la fecha seleccionada
+              final selectedNotes = snapshot.data!.where((note) {
+                final Timestamp? timestamp = note['date'];
+                final DateTime? noteDate = timestamp?.toDate();
+                return noteDate != null && isSameDay(noteDate, _selectedDay); // Compara fecha
+              }).toList();
+
+              
+              if (selectedNotes.isEmpty) {
+                return const Center(child: Text('No hay notas para este día'));
+              }
+
+              // final notes = snapshot.data!;
               return ListView.builder(
-                itemCount: notes.length,
+                itemCount: selectedNotes.length,
                 itemBuilder: (context, index) {
-                  final note = notes[index];
+                  final note = selectedNotes[index];
                   final Timestamp? timestamp = note['date'];
                   final DateTime? dateTime = timestamp?.toDate();
                   final String day = dateTime != null
